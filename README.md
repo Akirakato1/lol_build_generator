@@ -1,4 +1,5 @@
 pip install -i https://test.pypi.org/simple/ lol-build-generator==1.0.2
+
 https://test.pypi.org/project/lol-build-generator/1.0.2/
 
 get_rune_sequence_guide()->returns an image of the rune selection guide and console prints a message that describes the process of sequencing runes
