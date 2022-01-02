@@ -1,3 +1,6 @@
+pip install -i https://test.pypi.org/simple/ lol-build-generator==1.0.2
+https://test.pypi.org/project/lol-build-generator/1.0.2/
+
 get_rune_sequence_guide()->returns an image of the rune selection guide and console prints a message that describes the process of sequencing runes
 
 generate_rune_page(sequence, directory=None, bg_color=background_color)->takes a rune sequence in String and returns a rune page image. Optionally provide a saving directory for the image or a color for the background/border. A parser is provided to get rune sequence from comma separated runes in text form. 
