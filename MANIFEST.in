@@ -1,1 +1,3 @@
-include lol_build_generator/*.png
+include lol_build_generator/Assets/Items_assets/*.png
+include lol_build_generator/Assets/Runes_Assets/*.png
+include lol_build_generator/Assets/Summoners_Spells_Assets/*.png

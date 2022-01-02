@@ -3,6 +3,18 @@ from PIL import Image
 from numpy import array as nparray
 from numpy import mean as npmean
 
+def get_rune_sequence_guide():
+    im=get_image("RuneSequenceGuide",directory_rune)
+    print("Sequencing is in the order of:\n [Primary tree type, keystone, 1st rune, 2nd rune, 3rd rune, Secondary tree type, 1st rune, 2nd rune, 1st shard, 2nd shard, 3rd shard]")
+    print("Since secondary tree only allows for 2 runes to choose out of the 3 rows available, one of the row will be empty")
+    print("For the row corresponding to no selection of rune, the placeholder value is 5")
+    print("For all other selections, the sequence value is the 0 indexed number counting from the left")
+    print("For example, Domination's icon is second from the left, so counting from 0, its value 1")
+    print("Cheapshot's icon is the first one from the left so its value is 0.")
+    print("A sample rune page sequence for \n[dominate, electroctue, sudden impact, eyeball collection, raveenous hunteress, sorcery, transendence, gathering storms, adaptiving, adaptive, health]")
+    print("will look like this: 102202502000")
+    return im
+
 def generate_rune_page(sequence, directory=None, bg_color=background_color):
     background=Image.new(mode="RGB", size=(unit*10+3*boundary_width, unit*5+2*boundary_width), color=bg_color)
     first_tree=int(sequence[0])
@@ -235,12 +247,12 @@ def find_closest_items(user_input, show_parsed_items=False):
         
     return user_low
 
-def find_closest_summoners(user_input, show_parsed_items=False):
+def find_closest_summoners(user_input, show_parsed_summoners=False):
     user_low=user_input.split(",")
     for i in range(len(user_low)):
         user_low[i]=find_closest_word(user_low[i],summoners,False)
     
-    if show_parsed_items:
+    if show_parsed_summoners:
         print(user_low)
         
     return user_low

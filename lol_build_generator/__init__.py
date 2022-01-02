@@ -48,9 +48,10 @@ rune_shards=[["Adaptive", "AttackSpeed","AbilityHaste"],
              ["Adaptive","Armor","MagicResist"],
              ["Health","Armor","MagicResist"]]
 
-directory_rune="../Assets/Runes_Assets/"
-directory_item="../Assets/Items_assets/"
-directory_summoner="../Assets/Summoners_Spells_Assets/"
+current_directory=os.getcwd()
+directory_rune=current_directory+"/Assets/Runes_Assets/"
+directory_item=current_directory+"/Assets/Items_assets/"
+directory_summoner=current_directory+"/Assets/Summoners_Spells_Assets/"
 
 runes_low=create_runes_tuples_list()
 items=[i[0:-4] for i in os.listdir(directory_item)]
