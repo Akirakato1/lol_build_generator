@@ -16,4 +16,4 @@ item_test_page.show()
 
 test_summoner_string="exahust, ghost"
 sum_test_page=g.generate_summoner_page(g.find_closest_summoners(test_summoner_string))
-sum_test_page.show()a
+sum_test_page.show()
