@@ -14,7 +14,7 @@ setup(
     description="Generates images of builds",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/realpython/reader",
+    url="https://github.com/Akirakato1/lol_build_generator",
     author="Akirakato1",
     author_email="anarchira@gmail.com",
     license="MIT",
